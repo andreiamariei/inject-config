@@ -5,12 +5,12 @@ import org.springframework.web.bind.annotation.GetMapping
 import org.springframework.web.bind.annotation.RestController
 
 @RestController
-class RestApi {
+class MyRestApi {
 
     @Autowired
-    lateinit var strategy: Strategy
+    lateinit var myService: MyServiceInterface
 
     @GetMapping("/api")
-    fun get() = strategy.value()
+    fun get() = myService.value()
 
 }
